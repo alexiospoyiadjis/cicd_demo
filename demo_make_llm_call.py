@@ -19,7 +19,7 @@ response = client.models.generate_content(
     model="gemini-2.5-flash", contents=generate_prompt()
 )
 
-match = re.search(r"```.*?([\w\W]*?)```", response.text, re.DOTALL)
+match = re.search(r"```(?:python)?\s*([\w\W]*?)```", response.text, re.DOTALL)
 code_content = match.group(1).strip()
 print("---Extracted code ---")
 
