@@ -24,6 +24,6 @@ code_content = match.group(1).strip()
 print("---Extracted code ---")
 
 print(code_content)
-with open("loan_calc.py", "w") as f:
+with open("loan_payment.py", "w") as f:
     f.write(code_content)
     f.close()
